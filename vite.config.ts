@@ -3,12 +3,13 @@ import vue from '@vitejs/plugin-vue'
 import tailwindcss from '@tailwindcss/vite'
 import { fileURLToPath, URL } from 'node:url'
 
-export default defineConfig({
+export default defineConfig(({ mode }) => ({
   plugins: [vue(), tailwindcss()],
-  base: '/HomeStudio/',
+  // GitHub Pages: repositório em https://usuario.github.io/HomeStudio/
+  base: mode === 'production' ? '/HomeStudio/' : '/',
   resolve: {
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url)),
     },
   },
-})
+}))
