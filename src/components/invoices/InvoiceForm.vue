@@ -8,6 +8,7 @@ import { useInvoicesStore } from '@/stores/invoices'
 const props = defineProps<{
   invoice?: Invoice | null
   products: Product[]
+  initialType?: Invoice['type']
 }>()
 
 const emit = defineEmits<{
@@ -42,17 +43,28 @@ watch(
         items: inv.items.map((i) => ({ ...i })),
       })
     } else {
+      const type = props.initialType ?? 'entrada'
       Object.assign(form, {
         number: invoicesStore.nextNumber(),
-        type: 'entrada' as Invoice['type'],
+        type,
         personName: '',
-        status: 'entrada' as Invoice['status'],
+        status: type === 'entrada' ? 'entrada' : 'emitida',
         issueDate: new Date().toISOString().split('T')[0]!,
         items: [],
       })
     }
   },
   { immediate: true },
+)
+
+watch(
+  () => props.initialType,
+  (type) => {
+    if (!props.invoice && type) {
+      form.type = type
+      form.status = type === 'entrada' ? 'entrada' : 'emitida'
+    }
+  },
 )
 
 watch(

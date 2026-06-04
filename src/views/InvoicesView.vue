@@ -18,9 +18,11 @@ const ui = useUiStore()
 
 const showModal = ref(false)
 const editingInvoice = ref<Invoice | null>(null)
+const createType = ref<Invoice['type']>('entrada')
 
-function openCreate(type: 'entrada' | 'emitida' = 'entrada') {
+function openCreate(type: Invoice['type'] = 'entrada') {
   editingInvoice.value = null
+  createType.value = type
   showModal.value = true
 }
 
@@ -178,6 +180,7 @@ const tableRows = () =>
     >
       <InvoiceForm
         :invoice="editingInvoice"
+        :initial-type="createType"
         :products="productsStore.products"
         @submit="handleSubmit"
         @cancel="closeModal"

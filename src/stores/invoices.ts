@@ -3,7 +3,6 @@ import { computed, ref } from 'vue'
 import type { Invoice, InvoiceItem } from '@/types'
 import invoicesMock from '@/mocks/invoices.json'
 import { generateId } from '@/utils/uuid'
-import { todayISO } from '@/utils/format'
 import { useStockStore } from './stock'
 import { useUiStore } from './ui'
 
