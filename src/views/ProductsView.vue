@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 import { RouterLink } from 'vue-router'
+import AppIcon from '@/components/ui/AppIcon.vue'
 import DataTable from '@/components/ui/DataTable.vue'
 import StatusBadge from '@/components/ui/StatusBadge.vue'
 import EmptyState from '@/components/ui/EmptyState.vue'
@@ -109,7 +110,7 @@ const tableRows = () =>
       v-if="!productsStore.filteredProducts.length"
       title="Nenhum produto encontrado"
       description="Ajuste os filtros ou cadastre um novo produto."
-      icon="📦"
+      icon="lamp"
     >
       <button
         type="button"
@@ -135,9 +136,9 @@ const tableRows = () =>
       :rows="tableRows()"
     >
       <template #cell-image="{ row }">
-        <div class="mx-auto flex h-10 w-10 items-center justify-center overflow-hidden rounded-lg bg-surface-100">
+        <div class="mx-auto flex h-10 w-10 items-center justify-center overflow-hidden rounded-lg bg-surface-100 text-surface-400">
           <img v-if="row.image" :src="String(row.image)" alt="" class="h-full w-full object-cover" />
-          <span v-else class="text-lg">📦</span>
+          <AppIcon v-else name="lamp" size="sm" />
         </div>
       </template>
       <template #cell-name="{ row }">

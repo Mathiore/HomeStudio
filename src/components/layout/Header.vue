@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { computed } from 'vue'
 import { useRoute } from 'vue-router'
+import AppIcon from '@/components/ui/AppIcon.vue'
 import { useUiStore } from '@/stores/ui'
 
 const route = useRoute()
@@ -27,10 +28,10 @@ const pageTitle = computed(() => {
     <div class="flex items-center gap-3">
       <button
         type="button"
-        class="rounded-lg p-2 text-surface-700 hover:bg-surface-100 lg:hidden"
+        class="rounded-lg p-2 text-surface-500 hover:bg-surface-100 hover:text-surface-700 lg:hidden"
         @click="ui.toggleSidebar()"
       >
-        ☰
+        <AppIcon name="menu" size="md" />
       </button>
       <div>
         <h1 class="text-lg font-semibold text-surface-900">{{ pageTitle }}</h1>

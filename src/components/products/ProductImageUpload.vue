@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { ref, watch } from 'vue'
+import AppIcon from '@/components/ui/AppIcon.vue'
 
 const props = defineProps<{
   modelValue: string
@@ -48,10 +49,10 @@ function triggerUpload() {
     <label class="mb-2 block text-sm font-medium text-surface-700">Imagem do produto</label>
     <div class="flex items-start gap-4">
       <div
-        class="flex h-28 w-28 shrink-0 items-center justify-center overflow-hidden rounded-xl border-2 border-dashed border-surface-200 bg-surface-50"
+        class="flex h-28 w-28 shrink-0 items-center justify-center overflow-hidden rounded-xl border-2 border-dashed border-surface-200 bg-surface-50 text-surface-300"
       >
         <img v-if="preview" :src="preview" alt="Preview" class="h-full w-full object-cover" />
-        <span v-else class="text-3xl text-surface-700/30">🖼️</span>
+        <AppIcon v-else name="image" size="xl" />
       </div>
       <div class="flex flex-col gap-2">
         <input ref="fileInput" type="file" accept="image/*" class="hidden" @change="onFileChange" />

@@ -85,7 +85,7 @@ const tableRows = () =>
       v-if="!budgetsStore.budgets.length"
       title="Nenhum orçamento criado"
       description="Comece criando um orçamento rápido para seu cliente."
-      icon="📋"
+      icon="file-text"
     >
       <button
         type="button"

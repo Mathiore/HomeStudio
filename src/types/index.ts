@@ -76,3 +76,26 @@ export interface TableColumn {
   label: string
   align?: 'left' | 'center' | 'right'
 }
+
+export type IconName =
+  | 'layout-grid'
+  | 'lamp'
+  | 'layers'
+  | 'file-text'
+  | 'receipt'
+  | 'settings'
+  | 'menu'
+  | 'x'
+  | 'check'
+  | 'info'
+  | 'image'
+  | 'inbox'
+  | 'chart-bar'
+  | 'alert-triangle'
+  | 'arrow-down-tray'
+  | 'currency'
+  | 'document'
+  | 'arrow-up'
+  | 'arrow-down'
+  | 'trash'
+  | 'package'

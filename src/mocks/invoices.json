@@ -3,17 +3,17 @@
     "id": "inv-001",
     "number": "NF-000120",
     "type": "entrada",
-    "personName": "Fornecedor Decora LTDA",
+    "personName": "LumiTech Fornecedora LTDA",
     "items": [
       {
         "productId": "prod-004",
-        "name": "Almofada Decorativa Terracota",
-        "quantity": 24,
-        "unitPrice": 35,
-        "total": 840
+        "name": "Spot Embutido LED 7W",
+        "quantity": 48,
+        "unitPrice": 28,
+        "total": 1344
       }
     ],
-    "total": 840,
+    "total": 1344,
     "status": "entrada",
     "issueDate": "2026-06-04"
   },
@@ -21,17 +21,17 @@
     "id": "inv-002",
     "number": "NF-000121",
     "type": "entrada",
-    "personName": "Móveis & Cia",
+    "personName": "Ilumina Design & Cia",
     "items": [
       {
         "productId": "prod-001",
-        "name": "Cadeira Minimalista",
-        "quantity": 10,
-        "unitPrice": 120,
-        "total": 1200
+        "name": "Abajur Linho Natural",
+        "quantity": 12,
+        "unitPrice": 85,
+        "total": 1020
       }
     ],
-    "total": 1200,
+    "total": 1020,
     "status": "entrada",
     "issueDate": "2026-06-01"
   },
@@ -43,13 +43,13 @@
     "items": [
       {
         "productId": "prod-002",
-        "name": "Mesa de Centro Nórdica",
-        "quantity": 1,
-        "unitPrice": 490,
-        "total": 490
+        "name": "Pendente Industrial Veda",
+        "quantity": 3,
+        "unitPrice": 279,
+        "total": 837
       }
     ],
-    "total": 490,
+    "total": 837,
     "status": "emitida",
     "issueDate": "2026-06-04"
   }

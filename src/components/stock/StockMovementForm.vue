@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { reactive, watch } from 'vue'
 import type { Product } from '@/types'
+import AppIcon from '@/components/ui/AppIcon.vue'
 
 const props = defineProps<{
   products: Product[]
@@ -61,7 +62,7 @@ function handleSubmit() {
       <div class="grid grid-cols-2 gap-3">
         <button
           type="button"
-          class="rounded-xl border px-4 py-2.5 text-sm font-medium transition-colors"
+          class="flex items-center justify-center gap-2 rounded-xl border px-4 py-2.5 text-sm font-medium transition-colors"
           :class="
             form.type === 'entry'
               ? 'border-emerald-500 bg-emerald-50 text-emerald-700'
@@ -69,11 +70,12 @@ function handleSubmit() {
           "
           @click="form.type = 'entry'"
         >
-          ↑ Entrada
+          <AppIcon name="arrow-up" size="sm" />
+          Entrada
         </button>
         <button
           type="button"
-          class="rounded-xl border px-4 py-2.5 text-sm font-medium transition-colors"
+          class="flex items-center justify-center gap-2 rounded-xl border px-4 py-2.5 text-sm font-medium transition-colors"
           :class="
             form.type === 'exit'
               ? 'border-red-500 bg-red-50 text-red-700'
@@ -81,7 +83,8 @@ function handleSubmit() {
           "
           @click="form.type = 'exit'"
         >
-          ↓ Saída
+          <AppIcon name="arrow-down" size="sm" />
+          Saída
         </button>
       </div>
     </div>

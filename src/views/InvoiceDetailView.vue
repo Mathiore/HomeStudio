@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { computed, ref } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
+import AppIcon from '@/components/ui/AppIcon.vue'
 import StatusBadge from '@/components/ui/StatusBadge.vue'
 import ModalDrawer from '@/components/ui/ModalDrawer.vue'
 import InvoiceForm from '@/components/invoices/InvoiceForm.vue'
@@ -107,18 +108,20 @@ if (!invoice.value) {
         <button
           v-if="invoice.status !== 'cancelada'"
           type="button"
-          class="rounded-xl bg-emerald-600 px-4 py-2.5 text-sm font-medium text-white hover:bg-emerald-700"
+          class="inline-flex items-center gap-2 rounded-xl bg-emerald-600 px-4 py-2.5 text-sm font-medium text-white hover:bg-emerald-700"
           @click="applyStock"
         >
-          📦 Aplicar ao estoque
+          <AppIcon name="layers" size="sm" />
+          Aplicar ao estoque
         </button>
         <button
           v-if="invoice.type === 'emitida'"
           type="button"
-          class="rounded-xl bg-primary-600 px-4 py-2.5 text-sm font-medium text-white hover:bg-primary-700"
+          class="inline-flex items-center gap-2 rounded-xl bg-primary-600 px-4 py-2.5 text-sm font-medium text-white hover:bg-primary-700"
           @click="mockEmit"
         >
-          🧾 Emitir NF (mock)
+          <AppIcon name="receipt" size="sm" />
+          Emitir NF (mock)
         </button>
         <button
           type="button"

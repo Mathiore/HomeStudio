@@ -7,22 +7,22 @@
     "items": [
       {
         "productId": "prod-001",
-        "name": "Cadeira Minimalista",
+        "name": "Abajur Linho Natural",
         "quantity": 2,
-        "unitPrice": 220,
-        "total": 440
+        "unitPrice": 159,
+        "total": 318
       },
       {
         "productId": "prod-004",
-        "name": "Almofada Decorativa Terracota",
-        "quantity": 4,
-        "unitPrice": 69,
-        "total": 276
+        "name": "Spot Embutido LED 7W",
+        "quantity": 8,
+        "unitPrice": 52,
+        "total": 416
       }
     ],
-    "subtotal": 716,
+    "subtotal": 734,
     "discount": 40,
-    "total": 676,
+    "total": 694,
     "status": "sent",
     "createdAt": "2026-06-03"
   },
@@ -34,15 +34,15 @@
     "items": [
       {
         "productId": "prod-002",
-        "name": "Mesa de Centro Nórdica",
-        "quantity": 1,
-        "unitPrice": 490,
-        "total": 490
+        "name": "Pendente Industrial Veda",
+        "quantity": 3,
+        "unitPrice": 279,
+        "total": 837
       }
     ],
-    "subtotal": 490,
+    "subtotal": 837,
     "discount": 0,
-    "total": 490,
+    "total": 837,
     "status": "approved",
     "createdAt": "2026-06-04"
   },
@@ -54,22 +54,22 @@
     "items": [
       {
         "productId": "prod-005",
-        "name": "Tapete Berber Bege",
+        "name": "Plafon Cristal Dourado",
         "quantity": 2,
-        "unitPrice": 389,
-        "total": 778
+        "unitPrice": 419,
+        "total": 838
       },
       {
-        "productId": "prod-006",
-        "name": "Estante Modular Branca",
+        "productId": "prod-003",
+        "name": "Luminária de Piso Arc",
         "quantity": 1,
-        "unitPrice": 599,
-        "total": 599
+        "unitPrice": 349,
+        "total": 349
       }
     ],
-    "subtotal": 1377,
+    "subtotal": 1187,
     "discount": 100,
-    "total": 1277,
+    "total": 1087,
     "status": "draft",
     "createdAt": "2026-06-04"
   }

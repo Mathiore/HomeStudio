@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { computed, ref } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
+import AppIcon from '@/components/ui/AppIcon.vue'
 import StatusBadge from '@/components/ui/StatusBadge.vue'
 import ModalDrawer from '@/components/ui/ModalDrawer.vue'
 import BudgetForm from '@/components/budgets/BudgetForm.vue'
@@ -103,10 +104,11 @@ if (!budget.value) {
       <div class="mt-8 flex flex-wrap gap-3">
         <button
           type="button"
-          class="rounded-xl bg-primary-600 px-4 py-2.5 text-sm font-medium text-white hover:bg-primary-700"
+          class="inline-flex items-center gap-2 rounded-xl bg-primary-600 px-4 py-2.5 text-sm font-medium text-white hover:bg-primary-700"
           @click="mockPdf"
         >
-          📄 Gerar PDF (mock)
+          <AppIcon name="document" size="sm" />
+          Gerar PDF (mock)
         </button>
         <button
           type="button"

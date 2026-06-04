@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { useUiStore } from '@/stores/ui'
+import AppIcon from '@/components/ui/AppIcon.vue'
 
 const ui = useUiStore()
 </script>
@@ -18,9 +19,10 @@ const ui = useUiStore()
             'bg-primary-600': toast.type === 'info',
           }"
         >
-          <span>
-            {{ toast.type === 'success' ? '✓' : toast.type === 'error' ? '✕' : 'ℹ' }}
-          </span>
+          <AppIcon
+            :name="toast.type === 'success' ? 'check' : toast.type === 'error' ? 'x' : 'info'"
+            size="sm"
+          />
           {{ toast.message }}
         </div>
       </TransitionGroup>

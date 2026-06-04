@@ -78,39 +78,39 @@ const lowStockRows = computed(() =>
         title="Produtos cadastrados"
         :value="productsStore.totalProducts"
         subtitle="Produtos ativos"
-        icon="📦"
+        icon="lamp"
       />
       <StatCard
         title="Estoque baixo"
         :value="lowStockCount"
         subtitle="Produtos abaixo do mínimo ou zerados"
-        icon="⚠️"
+        icon="alert-triangle"
         variant="warning"
       />
       <StatCard
         title="Orçamentos"
         :value="budgetsStore.totalBudgets"
         subtitle="Total de orçamentos criados"
-        icon="📋"
+        icon="file-text"
       />
       <StatCard
         title="Notas fiscais"
         :value="invoicesStore.totalInvoices"
         subtitle="NFs registradas no sistema"
-        icon="🧾"
+        icon="receipt"
       />
       <StatCard
         title="Entradas recentes"
         :value="stockStore.recentMovements.filter((m) => m.type === 'entry').length"
         subtitle="Movimentações de entrada"
-        icon="📥"
+        icon="arrow-down-tray"
         variant="success"
       />
       <StatCard
         title="Valor em estoque"
         :value="formatCurrency(productsStore.estimatedStockValue)"
         subtitle="Baseado no preço de custo"
-        icon="💰"
+        icon="currency"
       />
     </div>
 

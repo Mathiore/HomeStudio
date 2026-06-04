@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { computed } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
+import AppIcon from '@/components/ui/AppIcon.vue'
 import StatusBadge from '@/components/ui/StatusBadge.vue'
 import ModalDrawer from '@/components/ui/ModalDrawer.vue'
 import ProductForm from '@/components/products/ProductForm.vue'
@@ -48,9 +49,9 @@ if (!product.value) {
 
     <div class="grid gap-6 lg:grid-cols-3">
       <div class="rounded-2xl border border-surface-200 bg-white p-6 lg:col-span-1">
-        <div class="flex aspect-square items-center justify-center overflow-hidden rounded-xl bg-surface-100">
+        <div class="flex aspect-square items-center justify-center overflow-hidden rounded-xl bg-surface-100 text-surface-300">
           <img v-if="product.image" :src="product.image" alt="" class="h-full w-full object-cover" />
-          <span v-else class="text-6xl">📦</span>
+          <AppIcon v-else name="lamp" size="xl" />
         </div>
         <div class="mt-4 flex flex-wrap gap-2">
           <StatusBadge :status="product.status" type="product" />

@@ -1,15 +1,17 @@
 <script setup lang="ts">
 import { RouterLink, useRoute } from 'vue-router'
+import type { IconName } from '@/types'
+import AppIcon from '@/components/ui/AppIcon.vue'
 import { useUiStore } from '@/stores/ui'
 
 const route = useRoute()
 const ui = useUiStore()
 
-const navItems = [
-  { to: '/', name: 'Dashboard', icon: 'grid' },
-  { to: '/produtos', name: 'Produtos', icon: 'box' },
+const navItems: { to: string; name: string; icon: IconName }[] = [
+  { to: '/', name: 'Dashboard', icon: 'layout-grid' },
+  { to: '/produtos', name: 'Produtos', icon: 'lamp' },
   { to: '/estoque', name: 'Estoque', icon: 'layers' },
-  { to: '/orcamentos', name: 'Orçamentos', icon: 'file' },
+  { to: '/orcamentos', name: 'Orçamentos', icon: 'file-text' },
   { to: '/notas-fiscais', name: 'Notas Fiscais', icon: 'receipt' },
   { to: '/configuracoes', name: 'Configurações', icon: 'settings' },
 ]
@@ -33,7 +35,7 @@ function isActive(path: string) {
       </div>
       <div>
         <p class="text-sm font-semibold text-surface-900">HomeStudio</p>
-        <p class="text-xs text-surface-700/60">Gestão de estoque</p>
+        <p class="text-xs text-surface-700/60">Iluminação & estoque</p>
       </div>
     </div>
 
@@ -50,13 +52,11 @@ function isActive(path: string) {
         "
         @click="ui.sidebarOpen = false"
       >
-        <span class="flex h-8 w-8 items-center justify-center rounded-lg bg-surface-100 text-base">
-          <template v-if="item.icon === 'grid'">▦</template>
-          <template v-else-if="item.icon === 'box'">📦</template>
-          <template v-else-if="item.icon === 'layers'">📊</template>
-          <template v-else-if="item.icon === 'file'">📋</template>
-          <template v-else-if="item.icon === 'receipt'">🧾</template>
-          <template v-else>⚙️</template>
+        <span
+          class="flex h-8 w-8 items-center justify-center rounded-lg"
+          :class="isActive(item.to) ? 'bg-primary-100 text-primary-600' : 'bg-surface-100 text-surface-500'"
+        >
+          <AppIcon :name="item.icon" size="sm" />
         </span>
         {{ item.name }}
       </RouterLink>

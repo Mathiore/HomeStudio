@@ -1,9 +1,12 @@
 <script setup lang="ts">
+import type { IconName } from '@/types'
+import AppIcon from '@/components/ui/AppIcon.vue'
+
 defineProps<{
   title: string
   value: string | number
   subtitle?: string
-  icon?: string
+  icon?: IconName
   trend?: string
   variant?: 'default' | 'warning' | 'success' | 'danger'
 }>()
@@ -19,7 +22,7 @@ defineProps<{
         <p v-if="trend" class="mt-2 text-xs font-medium text-emerald-600">{{ trend }}</p>
       </div>
       <div
-        class="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl text-lg"
+        class="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl"
         :class="{
           'bg-primary-50 text-primary-600': variant === 'default' || !variant,
           'bg-amber-50 text-amber-600': variant === 'warning',
@@ -27,7 +30,7 @@ defineProps<{
           'bg-red-50 text-red-600': variant === 'danger',
         }"
       >
-        {{ icon ?? '📊' }}
+        <AppIcon :name="icon ?? 'chart-bar'" size="lg" />
       </div>
     </div>
   </div>

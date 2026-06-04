@@ -96,7 +96,7 @@ function handleSubmit() {
           required
           list="categories"
           class="w-full rounded-xl border border-surface-200 px-3 py-2.5 text-sm outline-none focus:border-primary-500 focus:ring-2 focus:ring-primary-500/20"
-          placeholder="Ex: Móveis"
+          placeholder="Ex: Abajures"
         />
         <datalist id="categories">
           <option v-for="cat in productsStore.categories" :key="cat" :value="cat" />

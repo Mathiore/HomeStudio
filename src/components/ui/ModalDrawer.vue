@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import AppIcon from '@/components/ui/AppIcon.vue'
+
 defineProps<{
   title: string
   size?: 'sm' | 'md' | 'lg' | 'xl'
@@ -25,10 +27,10 @@ const sizeClass = {
           <h2 class="text-lg font-semibold text-surface-900">{{ title }}</h2>
           <button
             type="button"
-            class="rounded-lg p-2 text-surface-700 hover:bg-surface-100"
+            class="rounded-lg p-2 text-surface-500 hover:bg-surface-100 hover:text-surface-700"
             @click="$emit('close')"
           >
-            ✕
+            <AppIcon name="x" size="md" />
           </button>
         </div>
         <div class="overflow-y-auto p-6">

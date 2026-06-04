@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { computed, reactive, watch } from 'vue'
 import type { Invoice, InvoiceItem, Product } from '@/types'
+import AppIcon from '@/components/ui/AppIcon.vue'
 import { formatCurrency } from '@/utils/format'
 import { useInvoicesStore } from '@/stores/invoices'
 
@@ -202,7 +203,9 @@ function handleSubmit() {
             <td class="px-4 py-2 text-right">{{ formatCurrency(item.unitPrice) }}</td>
             <td class="px-4 py-2 text-right font-medium">{{ formatCurrency(item.total) }}</td>
             <td class="px-4 py-2 text-right">
-              <button type="button" class="text-red-500 hover:text-red-700" @click="removeItem(index)">✕</button>
+              <button type="button" class="text-red-500 hover:text-red-700" @click="removeItem(index)">
+                <AppIcon name="trash" size="sm" />
+              </button>
             </td>
           </tr>
         </tbody>

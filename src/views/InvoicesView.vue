@@ -104,7 +104,7 @@ const tableRows = () =>
       v-if="!invoicesStore.invoices.length"
       title="Nenhuma nota fiscal registrada"
       description="Registre uma NF de entrada ou emita uma NF para cliente."
-      icon="🧾"
+      icon="receipt"
     >
       <button
         type="button"
