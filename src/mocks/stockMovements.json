@@ -1,0 +1,47 @@
+[
+  {
+    "id": "mov-001",
+    "productId": "prod-001",
+    "type": "entry",
+    "quantity": 10,
+    "reason": "Compra de fornecedor",
+    "date": "2026-06-01",
+    "responsible": "Usuário Demo"
+  },
+  {
+    "id": "mov-002",
+    "productId": "prod-002",
+    "type": "entry",
+    "quantity": 5,
+    "reason": "Reposição de estoque",
+    "date": "2026-06-02",
+    "responsible": "Usuário Demo"
+  },
+  {
+    "id": "mov-003",
+    "productId": "prod-002",
+    "type": "exit",
+    "quantity": 3,
+    "reason": "Venda balcão",
+    "date": "2026-06-03",
+    "responsible": "Usuário Demo"
+  },
+  {
+    "id": "mov-004",
+    "productId": "prod-003",
+    "type": "exit",
+    "quantity": 2,
+    "reason": "Saída para showroom",
+    "date": "2026-06-03",
+    "responsible": "Usuário Demo"
+  },
+  {
+    "id": "mov-005",
+    "productId": "prod-004",
+    "type": "entry",
+    "quantity": 24,
+    "reason": "NF de entrada #NF-000120",
+    "date": "2026-06-04",
+    "responsible": "Usuário Demo"
+  }
+]

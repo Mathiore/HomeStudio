@@ -1,0 +1,56 @@
+[
+  {
+    "id": "inv-001",
+    "number": "NF-000120",
+    "type": "entrada",
+    "personName": "Fornecedor Decora LTDA",
+    "items": [
+      {
+        "productId": "prod-004",
+        "name": "Almofada Decorativa Terracota",
+        "quantity": 24,
+        "unitPrice": 35,
+        "total": 840
+      }
+    ],
+    "total": 840,
+    "status": "entrada",
+    "issueDate": "2026-06-04"
+  },
+  {
+    "id": "inv-002",
+    "number": "NF-000121",
+    "type": "entrada",
+    "personName": "Móveis & Cia",
+    "items": [
+      {
+        "productId": "prod-001",
+        "name": "Cadeira Minimalista",
+        "quantity": 10,
+        "unitPrice": 120,
+        "total": 1200
+      }
+    ],
+    "total": 1200,
+    "status": "entrada",
+    "issueDate": "2026-06-01"
+  },
+  {
+    "id": "inv-003",
+    "number": "NF-000122",
+    "type": "emitida",
+    "personName": "Carlos Mendes",
+    "items": [
+      {
+        "productId": "prod-002",
+        "name": "Mesa de Centro Nórdica",
+        "quantity": 1,
+        "unitPrice": 490,
+        "total": 490
+      }
+    ],
+    "total": 490,
+    "status": "emitida",
+    "issueDate": "2026-06-04"
+  }
+]

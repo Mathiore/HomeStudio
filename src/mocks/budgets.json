@@ -1,0 +1,76 @@
+[
+  {
+    "id": "bud-001",
+    "number": "ORC-0001",
+    "clientName": "Ana Silva",
+    "clientEmail": "ana.silva@email.com",
+    "items": [
+      {
+        "productId": "prod-001",
+        "name": "Cadeira Minimalista",
+        "quantity": 2,
+        "unitPrice": 220,
+        "total": 440
+      },
+      {
+        "productId": "prod-004",
+        "name": "Almofada Decorativa Terracota",
+        "quantity": 4,
+        "unitPrice": 69,
+        "total": 276
+      }
+    ],
+    "subtotal": 716,
+    "discount": 40,
+    "total": 676,
+    "status": "sent",
+    "createdAt": "2026-06-03"
+  },
+  {
+    "id": "bud-002",
+    "number": "ORC-0002",
+    "clientName": "Carlos Mendes",
+    "clientEmail": "carlos.m@email.com",
+    "items": [
+      {
+        "productId": "prod-002",
+        "name": "Mesa de Centro Nórdica",
+        "quantity": 1,
+        "unitPrice": 490,
+        "total": 490
+      }
+    ],
+    "subtotal": 490,
+    "discount": 0,
+    "total": 490,
+    "status": "approved",
+    "createdAt": "2026-06-04"
+  },
+  {
+    "id": "bud-003",
+    "number": "ORC-0003",
+    "clientName": "Studio Arquitetura LTDA",
+    "clientEmail": "contato@studioarq.com",
+    "items": [
+      {
+        "productId": "prod-005",
+        "name": "Tapete Berber Bege",
+        "quantity": 2,
+        "unitPrice": 389,
+        "total": 778
+      },
+      {
+        "productId": "prod-006",
+        "name": "Estante Modular Branca",
+        "quantity": 1,
+        "unitPrice": 599,
+        "total": 599
+      }
+    ],
+    "subtotal": 1377,
+    "discount": 100,
+    "total": 1277,
+    "status": "draft",
+    "createdAt": "2026-06-04"
+  }
+]
