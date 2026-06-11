@@ -9,7 +9,11 @@ defineProps<{
 }>()
 
 const lightboxOpen = ref(false)
-const lightboxMedia = ref({ src: '', type: 'image' as const, alt: '' })
+const lightboxMedia = ref<{ src: string; type: 'image' | 'video'; alt: string }>({
+  src: '',
+  type: 'image',
+  alt: '',
+})
 
 function openLightbox(src: string, type: 'image' | 'video', alt: string) {
   lightboxMedia.value = { src, type, alt }
