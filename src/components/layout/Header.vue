@@ -10,6 +10,7 @@ const ui = useUiStore()
 const pageTitle = computed(() => {
   const titles: Record<string, string> = {
     dashboard: 'Dashboard',
+    portfolio: 'Portfólio',
     products: 'Produtos',
     'product-detail': 'Detalhes do Produto',
     stock: 'Controle de Estoque',

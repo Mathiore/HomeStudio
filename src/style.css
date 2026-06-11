@@ -18,10 +18,26 @@
   --color-surface-700: #334155;
   --color-surface-800: #1e293b;
   --color-surface-900: #0f172a;
+
+  --color-portfolio-bg: #e6e6e8;
+  --color-portfolio-surface: #f0eeeb;
+  --color-portfolio-text: #1c1917;
+  --color-portfolio-muted: #78716c;
+  --color-portfolio-accent: #a67c3d;
+
+  --font-display: 'Cormorant Garamond', Georgia, serif;
 }
 
 body {
   @apply bg-surface-50 text-surface-800 antialiased;
+}
+
+.portfolio {
+  font-family: 'Inter', system-ui, sans-serif;
+}
+
+.portfolio .font-display {
+  font-family: var(--font-display);
 }
 
 ::-webkit-scrollbar {

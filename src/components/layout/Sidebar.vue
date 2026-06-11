@@ -9,6 +9,7 @@ const ui = useUiStore()
 
 const navItems: { to: string; name: string; icon: IconName }[] = [
   { to: '/', name: 'Dashboard', icon: 'layout-grid' },
+  { to: '/portfolio', name: 'Portfólio', icon: 'image' },
   { to: '/produtos', name: 'Produtos', icon: 'lamp' },
   { to: '/estoque', name: 'Estoque', icon: 'layers' },
   { to: '/orcamentos', name: 'Orçamentos', icon: 'file-text' },
